@@ -1,2 +1,1 @@
-# api_test_framework
-Postman-Newman API Tests
+# Postman-Newman API Tests

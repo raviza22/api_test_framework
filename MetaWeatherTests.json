@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "23495c91-3a61-4fe6-8f35-dfdcf893fed5",
+		"name": "MetaWeather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "metaweather_location_search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8133c58c-0b4b-459c-b50f-125984d7c4ea",
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.globals.set(\"latlong\", jsonData[0].latt_long);",
+							"pm.globals.set(\"woeid\", jsonData[0].woeid);",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5b18e918-bd5a-405a-b5fb-46aaf6509f9e",
+						"exec": [
+							"pm.iterationData.get(\"city\");",
+							"//pm.variables.set(\"city\", \"Singapore\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Request_URL}}/api/location/search/?query={{city}}",
+					"host": [
+						"{{Request_URL}}"
+					],
+					"path": [
+						"api",
+						"location",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "{{city}}"
+						}
+					]
+				},
+				"description": "Find a location"
+			},
+			"response": []
+		},
+		{
+			"name": "metaweather_lattlong_search",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1bdd79cc-dccf-477c-a93f-2de172eec1ba",
+						"exec": [
+							"//pm.iterationData.get(\"latlong\");",
+							"pm.globals.get(\"latlong\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e6391469-7f18-4eae-9220-d3f456d9bb16",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Request_URL}}/api/location/search/?lattlong={{latlong}}",
+					"host": [
+						"{{Request_URL}}"
+					],
+					"path": [
+						"api",
+						"location",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "lattlong",
+							"value": "{{latlong}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metaweather_location_id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "99476761-5010-4c0b-8506-7434a3056b53",
+						"exec": [
+							"pm.globals.get(\"woeid\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0402fc0-c747-49fb-ac8e-00d15a934f3b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Request_URL}}/api/location/{{woeid}}/",
+					"host": [
+						"{{Request_URL}}"
+					],
+					"path": [
+						"api",
+						"location",
+						"{{woeid}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metaweather_location_day",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7c0e444b-b526-4a8f-b05d-02faa330b5e0",
+						"exec": [
+							"pm.globals.get(\"woeid\");",
+							"",
+							"pm.variables.set(\"date\", \"2020/05/01\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0d80093-8dc2-43b8-9adc-98b261173111",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Request_URL}}/api/location/{{woeid}}/{{date}}",
+					"host": [
+						"{{Request_URL}}"
+					],
+					"path": [
+						"api",
+						"location",
+						"{{woeid}}",
+						"{{date}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
