@@ -1,0 +1,1 @@
+newman run MetaWeatherTests.json -e env.json -d data.json -k -r htmlextra --reporter-htmlextra-export Reports\TestReport.html

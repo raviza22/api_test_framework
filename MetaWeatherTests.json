@@ -60,7 +60,7 @@
 						}
 					]
 				},
-				"description": "Find a location"
+				"description": "MetaWeather Location Search"
 			},
 			"response": []
 		},
