@@ -1,1 +1,1 @@
-newman run MetaWeatherTests.json -e env.json -d data.json -k -r htmlextra --reporter-htmlextra-export Reports\TestReport.html
+newman run MetaWeatherTests.json -e env.json -d data.json -k -r junitfull,htmlextra --reporter-htmlextra-export Reports\HTMLReport.html --reporter-junitfull-export Reports\JunitReport.xml

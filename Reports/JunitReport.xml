@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite id="0" hostname="https://www.metaweather.com" package="" name="metaweather_location_search" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:26.077" time="0.871">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_search" name="Status code is 200" time="0.435"/>
+    <testcase classname=" / metaweather_location_search" name="Location Type is City" time="0.435"/>
+  </testsuite>
+  <testsuite id="1" hostname="https://www.metaweather.com" package="" name="metaweather_lattlong_search" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:26.948" time="0.450">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_lattlong_search" name="Status code is 200" time="0.225"/>
+    <testcase classname=" / metaweather_lattlong_search" name="Check Distance is 0" time="0.225"/>
+  </testsuite>
+  <testsuite id="2" hostname="https://www.metaweather.com" package="" name="metaweather_location_id" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:27.398" time="0.917">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_id" name="Status code is 200" time="0.459"/>
+    <testcase classname=" / metaweather_location_id" name="Check weather contains rain" time="0.459"/>
+  </testsuite>
+  <testsuite id="3" hostname="https://www.metaweather.com" package="" name="metaweather_location_day" tests="1" failures="0" errors="0" timestamp="2020-05-16T21:33:28.315" time="1.276">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_day" name="Status code is 200" time="1.276"/>
+  </testsuite>
+  <testsuite id="4" hostname="https://www.metaweather.com" package="" name="metaweather_location_search" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:29.591" time="0.458">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_search" name="Status code is 200" time="0.229"/>
+    <testcase classname=" / metaweather_location_search" name="Location Type is City" time="0.229"/>
+  </testsuite>
+  <testsuite id="5" hostname="https://www.metaweather.com" package="" name="metaweather_lattlong_search" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:30.049" time="0.482">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_lattlong_search" name="Status code is 200" time="0.241"/>
+    <testcase classname=" / metaweather_lattlong_search" name="Check Distance is 0" time="0.241"/>
+  </testsuite>
+  <testsuite id="6" hostname="https://www.metaweather.com" package="" name="metaweather_location_id" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:30.531" time="1.025">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_id" name="Status code is 200" time="0.512"/>
+    <testcase classname=" / metaweather_location_id" name="Check weather contains rain" time="0.512"/>
+  </testsuite>
+  <testsuite id="7" hostname="https://www.metaweather.com" package="" name="metaweather_location_day" tests="1" failures="0" errors="0" timestamp="2020-05-16T21:33:31.556" time="1.353">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_day" name="Status code is 200" time="1.353"/>
+  </testsuite>
+  <testsuite id="8" hostname="https://www.metaweather.com" package="" name="metaweather_location_search" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:32.909" time="0.414">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_search" name="Status code is 200" time="0.207"/>
+    <testcase classname=" / metaweather_location_search" name="Location Type is City" time="0.207"/>
+  </testsuite>
+  <testsuite id="9" hostname="https://www.metaweather.com" package="" name="metaweather_lattlong_search" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:33.323" time="0.405">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_lattlong_search" name="Status code is 200" time="0.203"/>
+    <testcase classname=" / metaweather_lattlong_search" name="Check Distance is 0" time="0.203"/>
+  </testsuite>
+  <testsuite id="10" hostname="https://www.metaweather.com" package="" name="metaweather_location_id" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:33.728" time="0.843">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_id" name="Status code is 200" time="0.421"/>
+    <testcase classname=" / metaweather_location_id" name="Check weather contains rain" time="0.421"/>
+  </testsuite>
+  <testsuite id="11" hostname="https://www.metaweather.com" package="" name="metaweather_location_day" tests="1" failures="0" errors="0" timestamp="2020-05-16T21:33:34.571" time="1.185">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_day" name="Status code is 200" time="1.185"/>
+  </testsuite>
+  <testsuite id="12" hostname="https://www.metaweather.com" package="" name="metaweather_location_search" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:35.756" time="0.366">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_search" name="Status code is 200" time="0.183"/>
+    <testcase classname=" / metaweather_location_search" name="Location Type is City" time="0.183"/>
+  </testsuite>
+  <testsuite id="13" hostname="https://www.metaweather.com" package="" name="metaweather_lattlong_search" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:36.122" time="0.386">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_lattlong_search" name="Status code is 200" time="0.193"/>
+    <testcase classname=" / metaweather_lattlong_search" name="Check Distance is 0" time="0.193"/>
+  </testsuite>
+  <testsuite id="14" hostname="https://www.metaweather.com" package="" name="metaweather_location_id" tests="2" failures="0" errors="0" timestamp="2020-05-16T21:33:36.508" time="1.037">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_id" name="Status code is 200" time="0.518"/>
+    <testcase classname=" / metaweather_location_id" name="Check weather contains rain" time="0.518"/>
+  </testsuite>
+  <testsuite id="15" hostname="https://www.metaweather.com" package="" name="metaweather_location_day" tests="1" failures="0" errors="0" timestamp="2020-05-16T21:33:37.545" time="1.230">
+    <properties>
+      <property name="latlong" value="1.293780,103.853256"/>
+      <property name="woeid" value="1062617"/>
+    </properties>
+    <testcase classname=" / metaweather_location_day" name="Status code is 200" time="1.230"/>
+  </testsuite>
+</testsuites>

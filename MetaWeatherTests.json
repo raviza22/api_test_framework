@@ -22,7 +22,10 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							""
+							"",
+							"pm.test(\"Location Type is City\", function () {",
+							"    pm.expect(jsonData[0].location_type).to.eql(\"City\");",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -32,8 +35,8 @@
 					"script": {
 						"id": "5b18e918-bd5a-405a-b5fb-46aaf6509f9e",
 						"exec": [
-							"pm.iterationData.get(\"city\");",
-							"//pm.variables.set(\"city\", \"Singapore\");"
+							"//pm.iterationData.get(\"city\");",
+							"pm.variables.set(\"city\", \"Singapore\");"
 						],
 						"type": "text/javascript"
 					}
@@ -60,7 +63,7 @@
 						}
 					]
 				},
-				"description": "MetaWeather Location Search"
+				"description": "Find a location"
 			},
 			"response": []
 		},
@@ -85,6 +88,11 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var jsonData = pm.response.json();",
+							"pm.test(\"Check Distance is 0\", function () {",
+							"    pm.expect(jsonData[0].distance).to.eql(0);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -135,6 +143,11 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Check weather contains rain\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Rain\");",
 							"});"
 						],
 						"type": "text/javascript"
@@ -169,7 +182,9 @@
 						"exec": [
 							"pm.globals.get(\"woeid\");",
 							"",
-							"pm.variables.set(\"date\", \"2020/05/01\");"
+							"var moment = require('moment');",
+							"pm.variables.set(\"date\", moment().format('YYYY/MM/DD'));",
+							""
 						],
 						"type": "text/javascript"
 					}
